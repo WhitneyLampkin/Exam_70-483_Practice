@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExamRefBook(70-483)", "ExamRefBook(70-483)", "{957D1D65-DFFA-4BEF-AD96-106C49959830}"
 EndProject
@@ -544,6 +544,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Objective_4-4", "Objective_4-4", "{7905352B-57D7-4509-B07D-E46168898EFE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Objective_4-5", "Objective_4-5", "{04A6B531-FFF6-4E07-ADF5-9D0A26A4C3C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationExampleYouTube", "SerializationExampleYouTube\SerializationExampleYouTube.csproj", "{D2D93E7D-4FEF-4BDC-BDF3-A678899E7F80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -1527,6 +1529,10 @@ Global
 		{BD0B96FF-F2B8-4EAE-BB1A-E91BAD4723F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD0B96FF-F2B8-4EAE-BB1A-E91BAD4723F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD0B96FF-F2B8-4EAE-BB1A-E91BAD4723F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2D93E7D-4FEF-4BDC-BDF3-A678899E7F80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2D93E7D-4FEF-4BDC-BDF3-A678899E7F80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2D93E7D-4FEF-4BDC-BDF3-A678899E7F80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2D93E7D-4FEF-4BDC-BDF3-A678899E7F80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1800,5 +1806,6 @@ Global
 		{30409551-FF79-4CD9-AFDB-3D1F27C984F3} = {9A78BC49-CF98-40D1-A304-FD36A1410856}
 		{7905352B-57D7-4509-B07D-E46168898EFE} = {9A78BC49-CF98-40D1-A304-FD36A1410856}
 		{04A6B531-FFF6-4E07-ADF5-9D0A26A4C3C3} = {9A78BC49-CF98-40D1-A304-FD36A1410856}
+		{D2D93E7D-4FEF-4BDC-BDF3-A678899E7F80} = {27792212-6A61-4815-9A90-6402382BD7CC}
 	EndGlobalSection
 EndGlobal
