@@ -3,6 +3,7 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Xml.Serialization;
+using System.Collections.Generic;
 
 namespace SerializationExampleYouTube
 {
@@ -16,6 +17,7 @@ namespace SerializationExampleYouTube
             //Create and/or open the specified file to store the open data
             Stream stream = File.Open("AnimalData.dat", FileMode.Create);
 
+            //Serializes or deserializes an object, or entire graph of connected objects, in binary format.
             BinaryFormatter bf = new BinaryFormatter();
 
             //Sending object data to the file.
@@ -56,6 +58,38 @@ namespace SerializationExampleYouTube
 
             Console.WriteLine(bowser.ToString());
 
+            //Now, with a collection of 'Animals'
+            //Creating the collection of Animals
+            List<Animal> theAnimals = new List<Animal>
+            {
+                new Animal("Animal1", 60, 30),
+                new Animal("Animal2", 55, 24),
+                new Animal("Animal3", 40, 20)
+            };
+
+            //Writing the objects to the XML file
+            using (Stream fs = new FileStream(@"C:\Users\Whitney\C#Data\bowser.xml", FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                XmlSerializer serializer2 = new XmlSerializer(typeof(List<Animal>));
+                serializer2.Serialize(fs, theAnimals);
+            }
+
+            //Setting the collection to null to verify that we are reading from the file
+            theAnimals = null;
+
+            //Deserializing from the file
+            XmlSerializer deserializer2 = new XmlSerializer(typeof(List<Animal>));
+
+            using (FileStream fs2 = File.OpenRead(@"C:\Users\Whitney\C#Data\bowser.xml"))
+            {
+                theAnimals = (List<Animal>)deserializer2.Deserialize(fs2);
+            }
+
+            foreach (var a in theAnimals)
+            {
+                Console.WriteLine(a.ToString());
+            }
+
             Console.ReadLine();
         }
     }
@@ -84,6 +118,7 @@ namespace SerializationExampleYouTube
 
 
         // SerializationInfo holds key/value pairs for the object data
+        //Serialization Method
         public void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             info.AddValue("Name", Name);
@@ -91,6 +126,7 @@ namespace SerializationExampleYouTube
             info.AddValue("Height", Height);
         }
 
+        //Deserialization Method
         public Animal(SerializationInfo info, StreamingContext context)
         {
             Name = (string)info.GetValue("Name", typeof(string));
