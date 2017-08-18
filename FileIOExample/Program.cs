@@ -173,12 +173,6 @@ namespace FileIOExample
 
             #endregion
 
-            FileStream fs;
-            MemoryStream ms;
-            NetworkStream ns;
-
-
-
             Console.ReadLine();
         }
     }
