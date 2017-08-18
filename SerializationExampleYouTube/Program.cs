@@ -15,6 +15,7 @@ namespace SerializationExampleYouTube
             Animal bowser = new Animal("Bowser", 45, 25);
 
             //Create and/or open the specified file to store the open data
+            //Provides a generic view of a sequence of bytes. (Stream is an abstract class.)
             Stream stream = File.Open("AnimalData.dat", FileMode.Create);
 
             //Serializes or deserializes an object, or entire graph of connected objects, in binary format.
