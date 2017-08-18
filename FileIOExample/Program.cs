@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -35,7 +36,7 @@ namespace FileIOExample
             #endregion
 
             #region Using File and FileInfo
-
+             
             string[] customers =
             {
                 "Customer 1",
@@ -171,6 +172,12 @@ namespace FileIOExample
             Console.WriteLine(br.ReadDouble());
 
             #endregion
+
+            FileStream fs;
+            MemoryStream ms;
+            NetworkStream ns;
+
+
 
             Console.ReadLine();
         }
